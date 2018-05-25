@@ -3,19 +3,21 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "jest": true
+        "jest": true,
+        "node": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module"
     },
     "rules": {
-        "linebreak-style": [1, "windows"],
         "semi": 0,
         "no-console": "off",
         "no-empty": "off",
         "no-var": 0,
         "no-alert": 0,
+        "no-undef": 0,
         "no-unused-vars": 0,
         "no-useless-constructor": 0,
         "padded-blocks": 0,
@@ -35,7 +37,6 @@
         "comma-dangle": 0,
         "eol-last": 0,
         "import/first": 0,
-        "import/no-unresolved": 0,
-        "no-undef": 0
+        "import/no-unresolved": 0
     }
 }
