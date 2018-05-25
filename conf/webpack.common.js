@@ -16,13 +16,13 @@ module.exports = {
   devtool: 'source-map', // enhance debugging by adding meta info for the browser devtools
 
   entry: {
-    app: './index.js'
+    app: ['babel-polyfill', './index.js']
   },
 
   output: {
     path: path.join(process.cwd(), 'dist'),
     filename: '[name].[hash].js',
-    publicPath: './',
+    publicPath: '/',
     sourceMapFilename: '[name].map'
   },
 
@@ -32,6 +32,9 @@ module.exports = {
   },
 
   module: {
+    loaders: [
+      { test: /\.jsx?$/, loader: 'babel', }
+    ],
     rules: [
       //   {
       //   enforce: "pre", //to check source files, not modified by other loaders (like babel-loader)
